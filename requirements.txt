@@ -1,0 +1,4 @@
+requests==2.8.1
+vyked>=2.2.2
+redis
+aioredis

@@ -62,6 +62,7 @@ class MobileServer(HTTPService):
             yield from redis_manager.set(mobile_format_key, username)
         return self.create_success_response(json.dumps({"message": "On board mate"}).encode())
 
+    @coroutine
     @get('/available-buddies')
     def get_available_users(self, request:Request):
         # hosts = json.dumps(self.available_hosts.keys())
