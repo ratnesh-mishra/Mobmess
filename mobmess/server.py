@@ -110,6 +110,7 @@ if __name__ == "__main__":
     Host.pubsub_host = config['REDIS_HOST']
     Host.pubsub_port = config['REDIS_PORT']
     Host.name = config['service_name']
+    Host.ronin = True
     Host.attach_service(http_service)
     Host.run()
 
